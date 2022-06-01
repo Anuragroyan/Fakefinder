@@ -1,0 +1,20 @@
+{% extends 'fakefinder/base.html' %}
+{% load static %}
+{% block content %}
+<table border="2" style="margin-left:53px;">
+    <tr>
+        <td><img src="{% static 'Screenshot (342).png' %}" alt="My image" height="350px"/></td>
+    </tr>
+</table><br>
+<div style="margin-left:565px;margin-top:-300px;">
+    <b>  Input text: {{t}} </b><br>
+    <b>  Result: {{a.0}} </b><br>
+    <b>  Accuracy: {{acc|floatformat:2}} % </b>
+</div><br><br><br><br><br><br><br>
+<nav aria-label="Page navigation example" style="margin-left:686px;">
+  <ul class="pagination">
+    <li class="page-item"><a class="page-link" href="/fakefinder/"><b>Home</b></a></li>
+    <li class="page-item"><a class="page-link" href="/fakefinder/index"><b>Index</b></a></li>
+  </ul>
+</nav>
+{% endblock %}

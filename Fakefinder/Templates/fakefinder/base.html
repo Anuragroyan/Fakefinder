@@ -1,0 +1,43 @@
+<!Doctype html>
+<html lang="en">
+{% load static %}
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Welcome to the Fakefinder</title>
+  </head>
+  <body>
+ 
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <div class="jumbotron jumbotron-fluid" style="height:250px;">
+        <div class="container">
+          <img src="{% static 'fake-news.jpg' %}" alt="My image" height="75px" width="95px">
+          <h1 class="display-5">FakeFinder</h1> 
+          <p class="lead"><b>Fakefinder is a fake news detection application using NLP.</b></p>
+        </div>
+      </div>
+    {% block content %}
+    <table border="2" style="margin-left: 128px;margin-bottom:1px;color:lawngreen;">
+    <tr>
+    <td><img src="{% static 'news.jpg' %}" alt="My image" height="379px" width="615px" style="margin-left: 41px;padding-right:34px;"></td>
+    <td><img src="{% static 'Statistics-2018.jpg' %}" alt="My image" height="379px" width="590px" style="margin-left: 53px;padding-left:-28px;"></td>
+  </tr> 
+  </table><br>
+  <nav aria-label="Page navigation example" style="margin-left:725px;">
+    <ul class="pagination">
+      <li class="page-item"><a class="page-link" href="index"><b>Index</b></a></li>
+      <li class="page-item"><a class="page-link" href="index/predict"><b>Predict</b></a></li>
+    </ul>
+  </nav>
+    {% endblock %}
+  </body>
+</html>

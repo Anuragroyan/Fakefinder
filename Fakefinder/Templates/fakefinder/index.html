@@ -1,0 +1,21 @@
+{% extends 'fakefinder/base.html' %}
+
+{% block content %}
+<div class="container">
+   <form action="predict" method="POST">
+    {% csrf_token %}
+    <div class="form-group">
+        <label for="exampleFormControlTextarea1">Provide the Text</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="8.5" name="content"></textarea>
+      </div><br>
+      <div class="form-group">
+          <button class="btn btn-outline-info" type="submit">Predict</button>
+      </div>
+  </form>
+</div><br>
+<nav aria-label="Page navigation example" style="margin-left:798px;">
+  <ul class="pagination">
+    <li class="page-item"><a class="page-link" href="/fakefinder/"><b>Home</b></a></li>
+  </ul>
+</nav>
+{% endblock  %}
